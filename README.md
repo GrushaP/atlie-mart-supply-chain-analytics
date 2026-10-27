@@ -47,7 +47,9 @@ flowchart LR
 
 ### End-to-end data journey
 
-![Illustrative end-to-end data journey](architecture/01_End_to_End_Data_Journey_Illustration.png)
+
+![Atlie Mart End-to-End Data Journey](screenshots/AtlieMart%20End-to-End%20Data%20Journey.png)
+
 
 *Conceptual architecture illustration; sample email, database interface, SQL snippets, and sample values in the illustration are illustrative, not evidence of executed queries or actual email contents. The real workflow and dashboard are shown separately below.*
 
@@ -192,6 +194,22 @@ Product demand versus shortages, category-level fulfillment, geographic concentr
 
 Customer exposure to incomplete, late, and combined failures; order-complexity patterns; and top affected customers. Interactive summary cards provide navigation to deeper customer-level investigation.
 
+
+### Interactive Customer Failure Navigation
+
+The Customer & Fulfillment Analysis dashboard includes three interactive customer cards:
+
+- **Elite Mart:** Incomplete Only — 29 orders
+- **Acclaimed Stores:** Late Only — 36 orders
+- **Coolblue:** Both Failures — 36 orders
+
+Clicking any of these cards navigates to the Customer Failure Deep Dive page, automatically selecting the corresponding failure category using Power BI bookmarks.
+
+![Interactive Customer Failure Navigation](screenshots/08_Interactive_Customer_Drill_Down.png)
+
+This feature enables users to move directly from high-level customer insights to detailed failure analysis without manually adjusting filters.
+
+
 ### Page 4 — Customer Failure Deep Dive
 
 ![Customer Failure Deep Dive dashboard](screenshots/04_Customer_Failure_Deep_Dive.png)
@@ -249,21 +267,17 @@ The following figures are **illustrative improvement targets**, not measured pro
 ```text
 atlie-mart-supply-chain-analytics/
 ├── README.md
-├── Atlie_Mart_Supply_Chain.pbix              # add your final PBIX
+├── Atlie_Mart_Supply_Chain.pbix            
 ├── architecture/
 │   └── 01_End_to_End_Data_Journey_Illustration.png
 ├── screenshots/
-│   ├── 01_Executive_Overview.png             # included: actual screenshot
-│   ├── 02_Product_Geographic.png             # add actual screenshot
-│   ├── 03_Customer_Fulfillment.png           # add actual screenshot
-│   ├── 04_Customer_Failure_Deep_Dive.png      # add actual screenshot
-│   ├── 05_Data_Model.png                     # add actual model screenshot
-│   ├── 06_n8n_Workflow.png                   # included: actual screenshot
-│   └── 07_Supabase_SQL_Analysis.png          # add actual Supabase SQL screenshot
-├── sql/
-│   └── analysis_queries.sql                  # add reviewed SQL, optional
-└── automation/
-    └── n8n_workflow_sanitized.json           # optional sanitized export
+│   ├── 01_Executive_Overview.png            
+│   ├── 02_Product_Geographic.png             
+│   ├── 03_Customer_Fulfillment.png           
+│   ├── 04_Customer_Failure_Deep_Dive.png     
+│   ├── 05_Data_Model.png                     
+│   ├── 06_n8n_Workflow.png                   
+│   └── 07_Supabase_SQL_Analysis.png          
 ```
 
 **Already included in this repository package:** your actual Power BI Executive Overview screenshot, your actual n8n workflow screenshot, and an *illustrative* data journey graphic.
